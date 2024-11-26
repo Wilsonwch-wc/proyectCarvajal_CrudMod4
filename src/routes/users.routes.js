@@ -7,7 +7,7 @@ const router = Router();
 // Rutas para usuarios
 router
     .route('/') // Ruta base "/api/users"
-    .get(authenticateToken, userController.getUsers) // Obtener todos los usuarios (protegido)
+    .get( userController.getUsers) // Obtener todos los usuarios 
     .post(userController.createUser); // Crear un usuario (no protegido, para registro público)
 
 router
