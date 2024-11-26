@@ -13,19 +13,9 @@ const sequelize = new Sequelize(
         host: process.env.DB_HOST, // Host del servidor
         dialect: process.env.DB_DIALECT || 'postgres', // Dialecto de la base de datos
         port: process.env.DB_PORT || 5432, // Puerto de la base de datos
-        logging: console.log, // Desactiva el registro de consultas en consola
-  dialect:{
-    
-      ssl: {
-        require: true,
-        rejectUnauthorized: false, // Para conectar con PostgreSQL SSL
-      }
-    }
-  
+        logging: false, // Desactiva el registro de consultas en consola
     }
 );
-
-
 
 // Exportar la instancia
 export default sequelize;
